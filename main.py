@@ -1,16 +1,23 @@
-# This is a sample Python script.
+from tkinter import *
+import time
+tk=Tk()
+tk.geometry("1024x576")
+tk.title("Lucid Tonight")
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+header_alarm=Label(tk)
+text_time=Label(tk,text="Time:")
+entry_hour=Entry(tk,width=5)
+text_timeColon=Label(tk,text=":")
+entry_minute=Entry(tk,width=5)
+text_24time=Label(tk,text="Note: This uses 24 hour time")
+button_feedback=Button(tk,text="Feedback") #,command=gitIssue)
 
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+header_alarm.grid(row=0,column=0)
+text_time.grid(row=1,column=0)
+entry_hour.grid(row=1,column=1)
+text_timeColon.grid(row=1,column=2)
+entry_minute.grid(row=1,column=3)
+text_24time.grid(row=1,column=4)
+while 1:
+    tk.update()
+    time.sleep(0.01)
